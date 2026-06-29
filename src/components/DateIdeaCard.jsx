@@ -1,10 +1,14 @@
 import { motion } from 'framer-motion'
 
 const categoryStyles = {
-  'K-drama': 'bg-lavender/70 text-warm-brown',
+  'K-Drama Moment': 'bg-lavender/70 text-warm-brown',
   Cozy: 'bg-blush/70 text-warm-brown',
-  Romantic: 'bg-rose/30 text-warm-brown',
-  Funny: 'bg-coffee/15 text-coffee',
+  'Stay-Home Date': 'bg-rose/30 text-warm-brown',
+  Foodie: 'bg-coffee/15 text-coffee',
+  'Rainy Day': 'bg-lavender/50 text-warm-brown',
+  'Low Budget': 'bg-cream text-coffee',
+  'Princess Treatment': 'bg-rose/40 text-warm-brown',
+  'Chaotic Cute': 'bg-blush/60 text-warm-brown',
 }
 
 /**

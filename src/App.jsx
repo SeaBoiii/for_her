@@ -9,6 +9,10 @@ import LetterBox from './pages/LetterBox'
 import PlaylistBench from './pages/PlaylistBench'
 import Arcade from './pages/Arcade'
 import SecretScene from './pages/SecretScene'
+import DailyScene from './pages/DailyScene'
+import CouponCorner from './pages/CouponCorner'
+import KDramaQuiz from './pages/KDramaQuiz'
+import SecretArchive from './pages/SecretArchive'
 
 export default function App() {
   const location = useLocation()
@@ -25,6 +29,10 @@ export default function App() {
           <Route path="/letter-box" element={<LetterBox />} />
           <Route path="/playlist-bench" element={<PlaylistBench />} />
           <Route path="/arcade" element={<Arcade />} />
+          <Route path="/daily-scene" element={<DailyScene />} />
+          <Route path="/coupon-corner" element={<CouponCorner />} />
+          <Route path="/kdrama-quiz" element={<KDramaQuiz />} />
+          <Route path="/secret-archive" element={<SecretArchive />} />
           <Route path="/secret-scene" element={<SecretScene />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>

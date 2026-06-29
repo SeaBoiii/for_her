@@ -1,11 +1,19 @@
 import { useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
+import { markLetterOpened } from '../utils/progress'
 
 /**
  * A tappable envelope that opens to reveal a handwritten note.
  */
 export default function LetterEnvelope({ letter, index = 0 }) {
   const [open, setOpen] = useState(false)
+
+  const toggle = () => {
+    setOpen((v) => {
+      if (!v) markLetterOpened(letter.title)
+      return !v
+    })
+  }
 
   return (
     <motion.div
@@ -16,7 +24,7 @@ export default function LetterEnvelope({ letter, index = 0 }) {
     >
       <button
         type="button"
-        onClick={() => setOpen((v) => !v)}
+        onClick={toggle}
         aria-expanded={open}
         className="flex w-full items-center gap-3 text-left focus:outline-none"
       >

@@ -4,18 +4,21 @@ import PageShell from '../components/PageShell'
 import CozyButton from '../components/CozyButton'
 import DateIdeaCard from '../components/DateIdeaCard'
 import { useVisitSection } from '../hooks/useProgress'
-import { dateIdeas } from '../data/dateIdeas'
+import { dateIdeas, dateCategories } from '../data/dateIdeas'
 
 export default function Cafe() {
   useVisitSection('cafe')
   const [idea, setIdea] = useState(null)
+  const [category, setCategory] = useState('Any')
 
   const orderIdea = () => {
-    let next = dateIdeas[Math.floor(Math.random() * dateIdeas.length)]
+    const pool = category === 'Any' ? dateIdeas : dateIdeas.filter((d) => d.category === category)
+    if (pool.length === 0) return
+    let next = pool[Math.floor(Math.random() * pool.length)]
     // Avoid repeating the same idea twice in a row when possible.
-    if (idea && dateIdeas.length > 1) {
+    if (idea && pool.length > 1) {
       while (next.title === idea.title) {
-        next = dateIdeas[Math.floor(Math.random() * dateIdeas.length)]
+        next = pool[Math.floor(Math.random() * pool.length)]
       }
     }
     setIdea(next)
@@ -25,9 +28,26 @@ export default function Cafe() {
     <PageShell emoji="☕" title="The Café" subtitle="Order today’s little date idea." maxWidth="max-w-2xl">
       <div className="flex flex-col items-center text-center">
         <p className="max-w-md font-body text-[15px] leading-relaxed text-cocoa/75">
-          The barista (me) only serves one thing here: soft little plans for us. Tap the button and
-          let the menu decide.
+          The barista (me) only serves one thing here: soft little plans for us. Pick a mood, then
+          tap the button and let the menu decide.
         </p>
+
+        <div className="mt-5 flex flex-wrap justify-center gap-2">
+          {['Any', ...dateCategories].map((c) => (
+            <button
+              key={c}
+              type="button"
+              onClick={() => setCategory(c)}
+              className={`rounded-full px-4 py-2 font-body text-sm font-semibold transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-rose/60 ${
+                category === c
+                  ? 'bg-rose text-white shadow-soft'
+                  : 'bg-white/70 text-warm-brown hover:bg-white'
+              }`}
+            >
+              {c}
+            </button>
+          ))}
+        </div>
 
         <div className="mt-6">
           <CozyButton onClick={orderIdea} className="px-8 py-4 text-lg">

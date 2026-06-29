@@ -3,8 +3,8 @@ import { AnimatePresence, motion } from 'framer-motion'
 import PageShell from '../components/PageShell'
 import CozyButton from '../components/CozyButton'
 import { useVisitSection } from '../hooks/useProgress'
+import { markArcadePlayed } from '../utils/progress'
 import { compliments } from '../data/compliments'
-
 const ITEM_EMOJIS = ['💖', '🌸', '⭐', '☕', '☂️']
 const ITEM_SIZE = 34 // px
 const BASKET_WIDTH = 74 // px
@@ -145,6 +145,7 @@ export default function Arcade() {
     lastTimeRef.current = 0
     runningRef.current = true
     setPlaying(true)
+    markArcadePlayed()
     cancelAnimationFrame(rafRef.current)
     rafRef.current = requestAnimationFrame(tick)
   }, [measure, tick])

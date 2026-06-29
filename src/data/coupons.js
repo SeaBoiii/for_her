@@ -1,0 +1,86 @@
+export const coupons = [
+  {
+    title: 'One coffee on me',
+    description: 'Whatever you crave, my treat. Extra syrup absolutely allowed.',
+    category: 'Treats',
+    emoji: '☕',
+  },
+  {
+    title: 'One dessert date',
+    description: 'We find something sweet and split it. You get the bigger half.',
+    category: 'Treats',
+    emoji: '🍰',
+  },
+  {
+    title: 'One long walk',
+    description: 'No destination, no rush. Just us and a slow scenic route.',
+    category: 'Time',
+    emoji: '🌙',
+  },
+  {
+    title: 'One movie night',
+    description: 'Your pick, too many blankets, snacks pre-approved. I won’t talk during it. Probably.',
+    category: 'Time',
+    emoji: '🎬',
+  },
+  {
+    title: 'One comfort call',
+    description: 'Call me whenever, I pick up and stay until you feel better.',
+    category: 'Care',
+    emoji: '📞',
+  },
+  {
+    title: 'One “I’ll listen properly” session',
+    description: 'Phone down, full attention, zero advice unless you ask. Just listening.',
+    category: 'Care',
+    emoji: '🤍',
+  },
+  {
+    title: 'One “send me your craving” food card',
+    description: 'Tell me what you’re hungry for and I make it appear. Magic, basically.',
+    category: 'Treats',
+    emoji: '🍜',
+  },
+  {
+    title: 'One “no judgement, just yap” card',
+    description: 'Talk forever about anything. I will gasp at all the right parts.',
+    category: 'Care',
+    emoji: '🗣️',
+  },
+  {
+    title: 'One cute photo together',
+    description: 'We take an annoyingly adorable picture. Yes, even if you say no first.',
+    category: 'Time',
+    emoji: '📸',
+  },
+  {
+    title: 'One bookstore date',
+    description: 'Browse books we won’t buy, judge covers, get a snack after. Iconic.',
+    category: 'Time',
+    emoji: '📚',
+  },
+  {
+    title: 'One rainy day walk',
+    description: 'Share an umbrella, walk slowly, pretend we’re in a soft drama scene.',
+    category: 'Time',
+    emoji: '🌧',
+  },
+  {
+    title: 'One princess-treatment snack run',
+    description: 'You sit, I run. Whatever snack you point at is yours. Royal service.',
+    category: 'Treats',
+    emoji: '👑',
+  },
+  {
+    title: 'One bad day rescue',
+    description: 'Hand me your worst mood and I’ll trade you something warm for it.',
+    category: 'Care',
+    emoji: '🩹',
+  },
+  {
+    title: 'One spontaneous adventure',
+    description: 'No plan, just yes. We pick a direction and see what happens.',
+    category: 'Time',
+    emoji: '🚗',
+  },
+]

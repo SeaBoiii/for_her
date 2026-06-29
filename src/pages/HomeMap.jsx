@@ -4,6 +4,7 @@ import LocationCard from '../components/LocationCard'
 import FloatingPetals from '../components/FloatingPetals'
 import Footer from '../components/Footer'
 import PageTransition from '../components/PageTransition'
+import DoNotPress from '../components/DoNotPress'
 import { useProgress } from '../hooks/useProgress'
 
 const locations = [
@@ -41,6 +42,34 @@ const locations = [
     emoji: '🎮',
     title: 'The Arcade Corner',
     description: 'For a tiny cute game.',
+  },
+  {
+    id: 'daily-scene',
+    to: '/daily-scene',
+    emoji: '🌤',
+    title: 'Daily Scene',
+    description: 'A small message that changes every day.',
+  },
+  {
+    id: 'coupon-corner',
+    to: '/coupon-corner',
+    emoji: '🎟',
+    title: 'Coupon Corner',
+    description: 'Tiny rewards she can claim.',
+  },
+  {
+    id: 'kdrama-quiz',
+    to: '/kdrama-quiz',
+    emoji: '🎬',
+    title: 'K-Drama Quiz',
+    description: 'Find out what kind of scene today feels like.',
+  },
+  {
+    id: 'secret-archive',
+    to: '/secret-archive',
+    emoji: '🗝',
+    title: 'Secret Archive',
+    description: 'Unlocked memories, hidden notes, and bonus scenes.',
   },
 ]
 
@@ -102,6 +131,10 @@ export default function HomeMap() {
           >
             ← back to the title card
           </Link>
+        </div>
+
+        <div className="mt-10 flex justify-center">
+          <DoNotPress />
         </div>
 
         <Footer />
